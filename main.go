@@ -1,17 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"gin-rest-api/modules/station" // Sesuaikan path dengan struktur folder kamu
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	
+	InitiateRouter()
 }
 
-func InitiateRouter(router *gin.Engine) {
-	
-	var {
-		router = gin.Default()
-		api = router.Group("/v1/api")
-	}
+func InitiateRouter() {
+
+	var (
+		router = gin.Default()           // Membuat router baru
+		api    = router.Group("/v1/api") // Membuat grup /v1/api
+	)
 
 	station.Initiate(api)
 
