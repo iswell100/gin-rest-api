@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gin-rest-api/modules/station" // Sesuaikan path dengan struktur folder kamu
+	"gin-rest-api/modules/station"
 
 	"github.com/gin-gonic/gin"
 )
